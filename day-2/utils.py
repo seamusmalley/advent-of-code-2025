@@ -27,9 +27,11 @@ def strict_validate(id: int) -> int:
     if len(id) < 2:
         return 0
     
+    # a repeated sequence cannot be longer than half the length of the id
     for i in range(1, (len(id) // 2) + 1):
         sequence = id[:i]
 
+        # check if sequence repeated to length of id matches id
         if sequence * (len(id) // len(sequence)) == id:
             return int(id)
 
