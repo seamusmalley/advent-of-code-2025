@@ -1,6 +1,8 @@
 from typing import List
 from utils import read_input, num_neighbors
 
+# Part 1
+# find number of rolls with less than four adjacent rolls
 def find_num_accessible_rolls(board: List[List[int]], max_adj_rolls: int) -> int:
     count = 0
     for i in range(len(board)):
@@ -9,7 +11,8 @@ def find_num_accessible_rolls(board: List[List[int]], max_adj_rolls: int) -> int
                 count += 1
     return count
 
-
+# Part 2
+# find rolls that can be moved, move them, repeat until no more are accessible
 def move_rolls(board: List[List[int]], max_adj_rolls: int) -> int:
     rolls_moved = 0
     rolls_to_move = True
@@ -30,6 +33,7 @@ def move_rolls(board: List[List[int]], max_adj_rolls: int) -> int:
 
 
 if __name__ == "__main__":
+    # test example cases work before running real deal
     test_input = read_input('example.txt')
     assert find_num_accessible_rolls(test_input, 4) == 13
     assert move_rolls(test_input, 4) == 43

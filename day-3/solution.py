@@ -1,6 +1,7 @@
 from typing import List
 from utils import read_input, max_joltage
 
+
 def sum_max_joltage(banks: List[List[int]], num_batteries: int) -> int:
     sum = 0
     for bank in banks:

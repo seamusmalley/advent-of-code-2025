@@ -10,6 +10,7 @@ def read_input(file_name: str = 'input.txt') -> List[List[str]]:
 
 
 # determine if an id is valid, return its numeric value if its not
+# an id is valid if it is not a sequence repeated twice
 def validate(id: int) -> int:
     id = str(id)
     if len(id) % 2 == 0:
@@ -18,7 +19,8 @@ def validate(id: int) -> int:
     return 0
 
 
-# part 2 validation
+# part 2 
+# an id is valid if it is not a repeated sequence
 def strict_validate(id: int) -> int:
     id = str(id)
 
