@@ -1,5 +1,5 @@
 from typing import List
-from utils import Problem, read_input
+from utils import Problem, read_input,  read_cephalopod_input
 
 # Part 1
 def do_math_homework(problems: List[Problem]) -> int:
@@ -15,3 +15,6 @@ if __name__ == "__main__":
 
     input = read_input()
     print(f'Part 1: {do_math_homework(input)}')
+    
+    ceph_input = read_cephalopod_input()
+    print(f'Part 2: {do_math_homework(ceph_input)}')
